@@ -38,18 +38,6 @@ class App extends Component {
         />
 
         <Project
-          name="Neighborhood Map"
-          link="neighborhood"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/maps.jpg"
-        />
-
-        <Project
-          name="Frogger Game"
-          link="frogger"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/rainforest.jpg"
-        />
-
-        <Project
           name="My Resume"
           link="/resume"
           image="https://s3.amazonaws.com/dunton-portfolio/media/resume.jpg"

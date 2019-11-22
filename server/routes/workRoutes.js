@@ -8,4 +8,8 @@ module.exports = app => {
   app.get("/resume", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client", "work", "resume.html"));
   });
+
+  app.get("/weather", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "work", "weather.html"));
+  });
 };

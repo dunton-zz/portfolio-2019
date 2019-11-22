@@ -38,6 +38,12 @@ class App extends Component {
         />
 
         <Project
+          name="Weather Forecaster"
+          link="/weather"
+          image="https://s3.amazonaws.com/dunton-portfolio/media/weather.jpg"
+        />
+
+        <Project
           name="My Resume"
           link="/resume"
           image="https://s3.amazonaws.com/dunton-portfolio/media/resume.jpg"

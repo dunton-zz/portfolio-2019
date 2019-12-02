@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { uuid } from "uuidv4";
 import Header from "./Header";
 import Project from "./Project";
+import { projectData } from "./ProjectData";
 
 class App extends Component {
+  renderProjects = () => {
+    return projectData.map(info => {
+      const uniqKey = uuid();
+      return <Project {...info} key={uniqKey} />;
+    });
+  };
   render() {
     return (
       <Container>
@@ -11,37 +19,7 @@ class App extends Component {
           mainImage="https://s3.amazonaws.com/dunton-portfolio/media/ny.jpg"
           headshot="https://s3.amazonaws.com/dunton-portfolio/media/headshot.png"
         />
-        <Project
-          name="Hawaii | Naturally Fit"
-          link="https://furthermore.equinox.com/hawaii"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/hawaii_bg.jpg"
-        />
-        <Project
-          name="Vanguard | Style Quiz"
-          link="https://partners.wsj.com/vanguard/style-quiz/"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/vanguard.jpg"
-        />
-        <Project
-          name="Service Now | Work Reimagined"
-          link="https://partners.wsj.com/servicenow/work-reimagined/"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/service_now.jpg"
-        />
-        <Project
-          name="Oscar Watch Tracker"
-          link="http://www.theoscarwatch.com/"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/oscar-watch.jpg"
-        />
-        <Project
-          name="Cole Haan | Chasing Ambition"
-          link="https://partners.wsj.com/chasing-ambition/"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/cole-haan.png"
-        />
-
-        <Project
-          name="Weather Forecaster"
-          link="/weather"
-          image="https://s3.amazonaws.com/dunton-portfolio/media/weather.jpg"
-        />
+        {this.renderProjects()}
 
         <Project
           name="My Resume"

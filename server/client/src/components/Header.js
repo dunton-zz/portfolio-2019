@@ -22,7 +22,7 @@ class Header extends Component {
 
 const HeaderContainer = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   @media (max-width: 769px) {
     height: 50vh;
   }

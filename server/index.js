@@ -6,6 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 require("./routes/workRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   // EXPRESS will serve up production assets like our main.js or main.css file

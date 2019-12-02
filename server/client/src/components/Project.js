@@ -4,12 +4,13 @@ import styled from "styled-components";
 // images are 1440x400
 
 const Project = props => {
+  const { image, link, name } = props;
   return (
-    <ProjectWrapper backgroundImage={props.image}>
-      <a href={props.link} target="_blank" rel="noopener noreferrer">
+    <ProjectWrapper backgroundImage={image}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="mask"></div>
         <div className="text-holder">
-          <h2>{props.name}</h2>
+          <h2>{name}</h2>
         </div>
       </a>
     </ProjectWrapper>
